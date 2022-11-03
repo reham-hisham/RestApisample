@@ -1,5 +1,5 @@
 const userModel = require('../models/user.model')
-var http = require("http");
+
 const JWT = require('jsonwebtoken')
 const userAuth = async(req, res , next)=>{
 try {

@@ -1,5 +1,5 @@
 const usermodel =require('../models/user.model')
-const productModel= require('../models/Product.model')
+
 const bcrypt = require('bcrypt')
 class userController {
     static login =async(req, res)=>{
@@ -38,28 +38,11 @@ class userController {
             console.log(error.message)
         }
  }
- static allProduct =async(req, res)=>{
-    try {
-        const allProduct = await productModel.find()
-        res.send(allProduct)
-    } catch (error) {
-      res.send(
-       { apiStatus:false, message:error.message}
-      )
 
-    }
- }
-static search = async()=>{
-    try {
-        const result = await productModel.find({price:20})
-        console.log(result)
-    } catch (error) {
-        
-    }
-}
+
 
 }
 module.exports = userController
 
-//$2b$08$VT4Y1Qyo9GxwGc8LSkQc9.wEDuXPyFjjTvkymgi8ASU31uyj2NBA2
+
 
